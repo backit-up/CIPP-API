@@ -136,6 +136,11 @@ function Invoke-HuduExtensionSync {
                 Icon  = 'fas fa-users-cog'
             }
             @{
+                Title = 'Defender'
+                URL   = 'https://security.microsoft.com/homepage?tid={0}' -f $Tenant.defaultDomainName
+                Icon  = 'fas fa-users-cog'
+            }
+            @{
                 Title = 'Intune'
                 URL   = 'https://intune.microsoft.com/{0}/' -f $Tenant.defaultDomainName
                 Icon  = 'fas fa-laptop'
