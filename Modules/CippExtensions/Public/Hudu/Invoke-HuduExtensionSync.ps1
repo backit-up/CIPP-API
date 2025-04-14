@@ -136,11 +136,6 @@ function Invoke-HuduExtensionSync {
                 Icon  = 'fas fa-users-cog'
             }
             @{
-                Title = 'Defender'
-                URL   = 'https://security.microsoft.com/homepage?tid={0}' -f $Tenant.defaultDomainName
-                Icon  = 'fas fa-users-cog'
-            }
-            @{
                 Title = 'Intune'
                 URL   = 'https://intune.microsoft.com/{0}/' -f $Tenant.defaultDomainName
                 Icon  = 'fas fa-laptop'
@@ -148,6 +143,22 @@ function Invoke-HuduExtensionSync {
             @{
                 Title = 'Teams Portal'
                 URL   = 'https://admin.teams.microsoft.com/?delegatedOrg={0}' -f $Tenant.defaultDomainName
+                Icon  = 'fas fa-users'
+            }
+            @{
+                Title = 'Sharepoint Portal'
+                URL   = 'https://admin.microsoft.com/Partner/beginclientsession.aspx?CTID={0}&CSDEST=SharePoint')' -f $Tenant.customerId
+                Icon  = 'fas fa-users'
+            }
+            @{
+                Title = 'Defender'
+                URL   = 'https://security.microsoft.com/homepage?tid={0}' -f $Tenant.defaultDomainName
+                Icon  = 'fas fa-users-cog'
+            }
+            @{
+                Title = 'Purview Portal'
+                
+                URL   = 'https://compliance.microsoft.com/homepage?CTID={0}' -f $Tenant.customerId
                 Icon  = 'fas fa-users'
             }
             @{
