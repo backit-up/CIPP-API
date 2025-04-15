@@ -244,7 +244,7 @@ function Invoke-HuduExtensionSync {
                                 <div class='basic_info__section'>
 								<h2>Last Updated</h2>
 								<p>
-									$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')
+									$(Get-Date -Format 'dd-MM-yyyy HH:mm:ss')
 								</p>
 								</div>
 						</article>
@@ -644,7 +644,7 @@ function Invoke-HuduExtensionSync {
 
                     $UserLinksBlock = "<div>Management Links</div><div class='o365'>$($UserLinksFormatted -join '')$($CIPPLinksFormatted -join '')</div>"
 
-                    $UserBody = "<div>$AssignedPlansBlock<br />$UserLinksBlock<br /><div class=`"nasa__content`">$($UserOverviewBlock)$($UserMailDetailsBlock)$($OneDriveBlock)$($UserMailSettingsBlock)$($UserPoliciesBlock)</div><div class=`"nasa__content`">$($UserDevicesDetailsBlock)</div><div class=`"nasa__content`">$($UserGroupsBlock)</div></div>"
+                    $UserBody = "<h2>Last Updated: $(Get-Date -Format 'dd-MM-yyyy HH:mm:ss')</h2><div>$AssignedPlansBlock<br />$UserLinksBlock<br /><div class=`"nasa__content`">$($UserOverviewBlock)$($UserMailDetailsBlock)$($OneDriveBlock)$($UserMailSettingsBlock)$($UserPoliciesBlock)</div><div class=`"nasa__content`">$($UserDevicesDetailsBlock)</div><div class=`"nasa__content`">$($UserGroupsBlock)</div></div>"
 
                     if (![string]::IsNullOrEmpty($PeopleLayoutId)) {
                         $UserAssetFields = @{
@@ -813,7 +813,7 @@ function Invoke-HuduExtensionSync {
                     }
                 }
 
-                $DeviceLinksBlock = "<div>Management Links</div><div class='o365'>$($DeviceLinksFormatted -join '')</div>"
+                $DeviceLinksBlock = "<h2>Last Updated: $(Get-Date -Format 'dd-MM-yyyy HH:mm:ss')</h2><div>Management Links</div><div class='o365'>$($DeviceLinksFormatted -join '')</div>"
 
                 $DeviceIntuneDetailshtml = "<div><div>$DeviceLinksBlock<br /><div class=`"nasa__content`">$($DeviceOverviewBlock)$($DeviceHardwareBlock)$($DeviceEnrollmentBlock)$($DevicePolicyBlock)$($DeviceAppsBlock)$($DeviceGroupsBlock)</div></div>"
 
