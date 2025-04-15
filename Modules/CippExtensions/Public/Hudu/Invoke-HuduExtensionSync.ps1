@@ -147,7 +147,7 @@ function Invoke-HuduExtensionSync {
             }
             @{
                 Title = 'Sharepoint Portal'
-                URL   = 'https://admin.microsoft.com/Partner/beginclientsession.aspx?CTID={0}&CSDEST=SharePoint')' -f $Tenant.customerId
+                URL   = 'https://admin.microsoft.com/Partner/beginclientsession.aspx?CTID={0}&CSDEST=SharePoint' -f $Tenant.customerId
                 Icon  = 'fas fa-users'
             }
             @{
