@@ -46,6 +46,9 @@ function Invoke-HuduExtensionSync {
         $ExtensionCache = Get-ExtensionCacheData -TenantFilter $Tenant.defaultDomainName
         $company_id = $TenantMap.IntegrationId
 
+        # PSA User URL (Only supports Halo PSA at the moment)
+        $PSAUserURL = 'https://your.halopsadomain.com/customers?mainview=user&inactive=false&userid='
+
         # If tenant not found in mapping table, return error
         if (!$TenantMap) {
             return 'Tenant not found in mapping table'
