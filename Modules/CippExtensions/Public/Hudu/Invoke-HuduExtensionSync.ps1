@@ -110,7 +110,7 @@ function Invoke-HuduExtensionSync {
 
         # Defaults
         $IntuneDesktopDeviceTypes = 'windowsRT,macMDM' -split ','
-        $DefaultSerials = [System.Collections.Generic.List[string]]@('SystemSerialNumber', 'To Be Filled By O.E.M.', 'System Serial Number', '0123456789', '123456789', 'TobefilledbyO.E.M.')
+        $DefaultSerials = [System.Collections.Generic.List[string]]@('0', 'SystemSerialNumber', 'To Be Filled By O.E.M.', 'System Serial Number', '0123456789', '123456789', 'TobefilledbyO.E.M.', '............', '')
 
         if ($Configuration.ExcludeSerials) {
             $ExcludeSerials = $DefaultSerials.AddRange($Configuration.ExcludeSerials -split ',')
