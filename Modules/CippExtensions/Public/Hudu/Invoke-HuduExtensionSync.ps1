@@ -244,7 +244,7 @@ function Invoke-HuduExtensionSync {
                                 <div class='basic_info__section'>
 								<h2>Last Updated</h2>
 								<p>
-									$(Get-Date -Format 'dd-MM-yyyy HH:mm:ss')
+									$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')
 								</p>
 								</div>
 						</article>
@@ -813,7 +813,7 @@ function Invoke-HuduExtensionSync {
                     }
                 }
 
-                $DeviceLinksBlock = "<h2>Last Updated $(Get-Date -Format 'dd-MM-yyyy HH:mm:ss')</h2><div>Management Links</div><div class='o365'>$($DeviceLinksFormatted -join '')</div>"
+                $DeviceLinksBlock = "<div>Management Links</div><div class='o365'>$($DeviceLinksFormatted -join '')</div>"
 
                 $DeviceIntuneDetailshtml = "<div><div>$DeviceLinksBlock<br /><div class=`"nasa__content`">$($DeviceOverviewBlock)$($DeviceHardwareBlock)$($DeviceEnrollmentBlock)$($DevicePolicyBlock)$($DeviceAppsBlock)$($DeviceGroupsBlock)</div></div>"
 
