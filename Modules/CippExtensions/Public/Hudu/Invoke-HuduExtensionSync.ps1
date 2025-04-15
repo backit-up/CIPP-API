@@ -556,7 +556,7 @@ function Invoke-HuduExtensionSync {
                     $UserOverviewFormatted.add($(Get-HuduFormattedField -Title 'User Name' -Value "$($User.displayName)"))
                     $UserOverviewFormatted.add($(Get-HuduFormattedField -Title 'User Principal Name' -Value "$($User.userPrincipalName)"))
                     $UserOverviewFormatted.add($(Get-HuduFormattedField -Title 'User ID' -Value "$($User.ID)"))
-                    $UserOverviewFormatted.add($(Get-FormatedField -Title 'Onprem SamAccountName'  -Value "$($User.OnPremisesSamAccountName)"))
+                    $UserOverviewFormatted.add($(Get-HuduFormattedField -Title 'Onprem SamAccountName'  -Value "$($User.OnPremisesSamAccountName)"))
                     $UserOverviewFormatted.add($(Get-HuduFormattedField -Title 'User Enabled' -Value "$($User.accountEnabled)"))
                     $UserOverviewFormatted.add($(Get-HuduFormattedField -Title 'Job Title' -Value "$($User.jobTitle)"))
                     $UserOverviewFormatted.add($(Get-HuduFormattedField -Title 'Mobile Phone' -Value "$($User.mobilePhone)"))
